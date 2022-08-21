@@ -1,0 +1,30 @@
+{
+    "ip": "89.66.134.30",
+    "type": "ipv4",
+    "continent_code": "EU",
+    "continent_name": "Europe",
+    "country_code": "PL",
+    "country_name": "Poland",
+    "region_code": "MA",
+    "region_name": "Lesser Poland",
+    "city": "Krak\u00f3w",
+    "zip": "30-031",
+    "latitude": 50.07072067260742,
+    "longitude": 19.93099021911621,
+    "location": {
+        "geoname_id": 3094802,
+        "capital": "Warsaw",
+        "languages": [
+            {
+                "code": "pl",
+                "name": "Polish",
+                "native": "Polski"
+            }
+        ],
+        "country_flag": "https://assets.ipstack.com/flags/pl.svg",
+        "country_flag_emoji": "\ud83c\uddf5\ud83c\uddf1",
+        "country_flag_emoji_unicode": "U+1F1F5 U+1F1F1",
+        "calling_code": "48",
+        "is_eu": true
+    }
+}

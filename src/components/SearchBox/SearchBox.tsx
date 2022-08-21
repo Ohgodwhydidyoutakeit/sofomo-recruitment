@@ -1,11 +1,14 @@
 
 
 import { FC } from 'react'
-import './SeatchBox.scss'
+import './SearchBox.scss'
 
-export const SeatchBox: FC = () => {
+
+interface ISearchProps {
+    placeholder?: string
+}
+export const SearchBox: FC<ISearchProps> = ({ placeholder }: ISearchProps) => {
     return (
-
-        <></>
+        <input type="text" placeholder={placeholder || "search box"} />
     )
 }
