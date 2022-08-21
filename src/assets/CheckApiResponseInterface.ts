@@ -1,6 +1,6 @@
 
 
-export interface IApiResponse {
+export interface ICheckApiResponse {
     ip: string;
     type: string;
     continent_code: string;
