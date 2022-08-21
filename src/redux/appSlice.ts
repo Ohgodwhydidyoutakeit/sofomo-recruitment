@@ -23,9 +23,10 @@ const initialState: AppState = {
 
 }
 
-const axiosCallToApi = createAsyncThunk(
-    'axiosCall',
+export const axiosCallToApi = createAsyncThunk(
+    'app/axiosCallToApi',
     async (data: string) => {
+        // check if data is an ip adress if not get domain name
         const response = await axios.get<IIpApiReponseInterface>(URLS.apiUrl(data))
         return response.data
     }
@@ -33,7 +34,6 @@ const axiosCallToApi = createAsyncThunk(
 
 export const appSlice = createSlice({
     name: 'app',
-    // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
         checkUrl: (state, action: PayloadAction<string>) => {
@@ -50,13 +50,12 @@ export const appSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        // Add reducers for additional action types here, and handle loading state as needed
         builder.addCase(axiosCallToApi.fulfilled, (state, action) => {
-            // Add user to the state array
             state.apiData = action.payload
         })
     },
 })
+
 
 export const { checkUrl, setError, closeError} = appSlice.actions
 
