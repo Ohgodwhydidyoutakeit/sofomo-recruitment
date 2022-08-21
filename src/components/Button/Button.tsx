@@ -4,11 +4,11 @@ import './Button.scss'
 
 
 interface IButtonProps {
-    text: string
+    text?: string
 }
-export const Button: FC<IButtonProps> = ({ text: IButtonProps }) => {
+export const Button: FC<IButtonProps> = ({ text }: IButtonProps) => {
     return (
-        <></>
+        <button> {text || "search"}</button>
     )
 
 }

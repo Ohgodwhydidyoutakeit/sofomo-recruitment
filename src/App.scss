@@ -1,38 +1,48 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box; 
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3rem 1fr;
+  grid-gap: 1rem;
+  padding: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.listOfSearches {
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.searchBox {
+  grid-column: 2 ;
+  display:flex;
+  justify-content: space-between;
+  input{
+    width: 70%
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  button{
+    width: 20%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+}
+
+@mixin mapsContainerLayout {
+    display:flex;
+    justify-content: space-between;
+    &>:first-child{
+      width: 52.5%;
+    }
+    &>:nth-child(2){
+      width: 42.5%;
+    }
+
+}
+.userMapContainer {
+  @include mapsContainerLayout()
+  
+}
+
+.lastMapContainer {
+  @include mapsContainerLayout()
 }
